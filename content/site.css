@@ -1,48 +1,108 @@
 body {
     font-family: 'Bangers';
-
-    background-image: url("../images/bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: darken;
 }
 
-a {
+/* Background */
+@media only screen and (max-width: 576px) {
+    .background {
+        background-color: #121f22;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .background {
+        background-image: url("../images/Background.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+}
+/* /Background */
+
+/* Header */
+.header a {
     color: white;
 }
 
-a:hover {
-    color: white;
-}
+    .header a:hover {
+        color: white;
+    }
 
-a > label {
+.header a > label {
     cursor: pointer;
 }
 
-a > label:hover {
-    text-decoration: underline;
-}
+    .header a > label:hover {
+        text-decoration: underline;
+    }
+/* /Header */
 
-.hide-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-
+/* Scrollbar */
 .hide-scrollbar {
     -ms-overflow-style: none;
 }
 
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+/* /Scrollbar */
+
 /* Height VH Utility */
-.vh-10 {
+.height-10-vh {
     height: 10vh;
 }
 
-.vh-15 {
+.height-15-vh {
     height: 15vh;
 }
 
-.vh-85 {
+.height-min-15-vh {
+    min-height: 15vh;
+}
+
+.height-30-vh {
+    height: 30vh;
+}
+
+.height-min-30-vh {
+    min-height: 30vh;
+}
+
+.height-70-vh {
+    height: 70vh;
+}
+
+.height-min-70-vh {
+    min-height: 70vh;
+}
+
+.height-75-vh {
+    height: 75vh;
+}
+
+.height-min-75-vh {
+    min-height: 75vh;
+}
+
+.height-85-vh {
     height: 85vh;
+}
+
+@media only screen and (min-width: 576px) {
+    .height-85-vh-sm {
+        height: 85vh;
+    }
+}
+
+.height-100-vh {
+    height: 100vh;
+}
+
+@media only screen and (min-width: 576px) {
+    .height-100-vh-sm {
+        height: 100vh;
+    }
 }
 
 /* Width Utility */
@@ -66,4 +126,15 @@ a > label:hover {
 
     background-color: whitesmoke;
 }
-  
+
+@media only screen and (max-width: 576px) {
+    .soundcloud-frame-sm {
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .soundcloud-frame-md {
+        height: 450px;
+    }
+}
