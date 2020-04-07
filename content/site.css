@@ -3,7 +3,7 @@ body {
 }
 
 /* Background */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575.98px) {
     .background {
         background-color: #121f22;
     }
@@ -19,24 +19,6 @@ body {
     }
 }
 /* /Background */
-
-/* Header */
-.header a {
-    color: white;
-}
-
-    .header a:hover {
-        color: white;
-    }
-
-.header a > label {
-    cursor: pointer;
-}
-
-    .header a > label:hover {
-        text-decoration: underline;
-    }
-/* /Header */
 
 /* Scrollbar */
 .hide-scrollbar {
@@ -57,28 +39,20 @@ body {
     height: 15vh;
 }
 
-.height-min-15-vh {
-    min-height: 15vh;
-}
-
-.height-30-vh {
-    height: 30vh;
-}
-
-.height-min-30-vh {
-    min-height: 30vh;
-}
-
-.height-70-vh {
-    height: 70vh;
+@media only screen and (min-width: 576px) {
+    .height-15-vh-sm {
+        min-height: 15vh;
+    }
 }
 
 .height-min-70-vh {
     min-height: 70vh;
 }
 
-.height-75-vh {
-    height: 75vh;
+@media only screen and (min-width: 576px) {
+    .height-min-70-vh-sm {
+        min-height: 70vh;
+    }
 }
 
 .height-min-75-vh {
@@ -89,32 +63,34 @@ body {
     height: 85vh;
 }
 
-@media only screen and (min-width: 576px) {
-    .height-85-vh-sm {
-        height: 85vh;
+.height-min-85-vh {
+    min-height: 85vh;
+}
+
+@media only screen and (max-width: 575.98px) {
+    .height-min-85-vh-xs {
+        min-height: 85vh;
     }
 }
 
 .height-100-vh {
     height: 100vh;
 }
-
-@media only screen and (min-width: 576px) {
-    .height-100-vh-sm {
-        height: 100vh;
-    }
-}
+/* /Height VH Utility */
 
 /* Width Utility */
 .width-full {
     width: 100%;
 }
+/* /Width Utility */
 
 /* Height Utility */
 .height-full {
     height: 100%;
 }
+/* /Height Utility */
 
+/* Loading Hover */
 .loading {
     position: absolute;
     top: 0;
@@ -126,7 +102,24 @@ body {
 
     background-color: whitesmoke;
 }
+/* /Loading Hover */
 
+/* Header */
+.header a {
+    color: white;
+}
+    .header a:hover {
+        color: white;
+    }
+    .header a > label {
+        cursor: pointer;
+    }
+        .header a > label:hover {
+            text-decoration: underline;
+        }
+/* /Header */
+
+/* Soundcloud Frame */
 @media only screen and (max-width: 576px) {
     .soundcloud-frame-sm {
         height: 300px;
@@ -138,3 +131,4 @@ body {
         height: 450px;
     }
 }
+/* /Soundcloud Frame */

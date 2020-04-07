@@ -2,18 +2,23 @@
 <html lang="it">
 
 <head>
+  <script type="text/javascript">
+    console.time("LoadingTime");
+  </script>
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <script src="https://kit.fontawesome.com/c5fe044944.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c5fe044944.js" crossorigin="None"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="None">
+
   <link rel="stylesheet" href="content/font.css" />
   <link rel="stylesheet" href="content/site.css" />
   <link rel="stylesheet" href="content/animation.css" />
-
   <link rel="stylesheet" href="content/player.css" />
+
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.0.3/dist/amplitude.js"></script>
 
   <title>
@@ -25,24 +30,13 @@
   
   <!-- Loading Hover -->
   <div id="LoadingHover" class="loading">
-    <div class="container-fluid">
-      <div class="container-fluid height-100-vh">
-        <div class="row justify-content-center height-full">
-          <div class="col-auto align-self-center">
-            <div class="lds-default">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
+    <div class="container-fluid height-100-vh">
+      <div class="row height-full justify-content-center">
+        <div class="col-auto align-self-center">
+          <div class="loading-animation">
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
           </div>
         </div>
       </div>
@@ -51,12 +45,11 @@
   <!-- /Loading Hover -->
 
   <div id="Content" class="container-fluid">
-
     <!-- Header -->
-    <div id="Header" class="container height-15-vh header"> <!-- d-none d-sm-block -->
+    <div id="Header" class="container height-15-vh header">
       <div class="row height-full">
         <div class="col">
-          <div class="row justify-content-md-center height-full">
+          <div class="row height-full justify-content-md-center">
             <div class="col-sm-auto align-self-center d-none d-sm-block">
               <a href="#Home">
                 <label class="font-size-medium text-center">Home</label>
@@ -69,7 +62,7 @@
             </div>
             <div class="col-sm-auto align-self-center">
               <div class="row">
-                <div class="col-12">
+                <div class="col">
                   <a href="#Home">
                     <label title="RICI" class="font-size-large text-center d-block">RICI</label>
                   </a>
@@ -77,17 +70,17 @@
               </div>
               <div class="row no-gutters" style="margin-top: -15px;">
                 <div class="col-2 offset-3 col-sm-4 offset-sm-0 text-center">
-                  <a href="https://soundcloud.com/riccardo-prisco-908420952" target="_blank">
+                  <a href="https://soundcloud.com/riccardo-prisco-908420952" target="_blank" rel="norefferer">
                     <i class="fab fa-soundcloud text-white"></i>
                   </a>
                 </div>
                 <div class="col-2 col-sm-4 text-center">
-                  <a href="https://www.youtube.com/channel/UC8J7jYxRFqGijQ6p1lRzYIg/featured" target="_blank">
+                  <a href="https://www.youtube.com/channel/UC8J7jYxRFqGijQ6p1lRzYIg/featured" target="_blank" rel="norefferer">
                     <i class="fab fa-youtube text-white"></i>
                   </a>
                 </div>
                 <div class="col-2 col-sm-4 text-center">
-                  <a href="https://www.instagram.com/riccardoprisco/" target="_blank">
+                  <a href="https://www.instagram.com/riccardoprisco/" target="_blank" rel="norefferer">
                     <i class="fab fa-instagram text-white"></i>
                   </a>
                 </div>
@@ -109,12 +102,14 @@
     </div>
     <!-- /Header -->
 
-    <div class="container-fluid height-85-vh hide-scrollbar" style="overflow: scroll;">
+    <!-- Body -->
+    <div class="container-fluid height-85-vh overflow-auto hide-scrollbar">
+      <!-- Home -->
       <div id="Home" class="row height-85-vh">
         <div class="col-12">
           <!-- Content -->
           <div class="row height-min-75-vh">
-            <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 align-self-center">
+            <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 align-self-center">
               <div class="card">
                 <div class="card-body">
                   <div class="container-fluid">
@@ -137,158 +132,128 @@
             </div>
           </div>
           <!-- /Content -->
-          <!-- Scroll -->
+          <!-- Scroll To Beats -->
           <div class="row height-10-vh">
-            <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+            <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
               <div class="scroll-down">
                 <a href="#Beats"><span></span></a>
               </div>
             </div>
           </div>
-          <!-- /Scroll -->
+          <!-- /Scroll To Beats -->
         </div>
       </div>
+      <!-- /Home -->
+      <!-- Beats -->
       <div id="Beats" class="row height-85-vh">
+        <!-- PlayerTemplate -->
+        <template id="PlayerTemplate">
+          <div class="row mb-2">
+            <div class="col-sm-12">
+              <div class="player-container">
+                <section class="player-cover">
+                    <img class="cover" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="">
+                </section>
+                <section class="player">
+                    <h4 class="player-title" data-amplitude-song-info="name" data-amplitude-song-index=""></h4>
+                    <h5 class="player-author" data-amplitude-song-info="author" data-amplitude-song-index=""></h5>
+                    <div class="player-time">
+                        <p class="amplitude-current-minutes" data-amplitude-song-index=""></p>
+                        :
+                        <p class="amplitude-current-seconds" data-amplitude-song-index=""></p>
+                        <p class="amplitude-duration-minutes" data-amplitude-song-index=""></p>
+                        :
+                        <p class="amplitude-duration-seconds" data-amplitude-song-index=""></p>
+                    </div>
+                    <progress class="player-progress amplitude-song-played-progress" data-amplitude-song-index=""></progress>
+                    <div class="player-controls">
+                        <div class="player-controls-backward amplitude-prev">
+                            <img src="images/Backward.svg" alt="Backward">
+                        </div>
+                        <div class="player-controls-play amplitude-play-pause" data-amplitude-song-index="">
+                            <img src="images/Play.svg" alt="Play/Pause">
+                        </div>
+                        <div class="player-controls-forward amplitude-next">
+                            <img src="images/Forward.svg" alt="Forward">
+                        </div>
+                    </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </template>
+        <!-- /PlayerTemplate -->
         <div class="col-12">
           <!-- Content -->
           <div class="row height-min-75-vh">
-            <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 align-self-center">
+            <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 align-self-center">
               <div class="card">
-                <div class="card-body">
+                <div id="BeatsCardBody" class="card-body">
                   <div class="row justify-content-sm-center">
                     <div class="col-sm-12">
                       <h4 class="text-center">Beats</h4>
                     </div>
                   </div>
-                  <!-- Song Structure -->
-                  <div class="row">
-                    <div class="col-sm-12">
-                      
-                      <div class="music-container">
-                        <section class="album-cover">
-                            <img class="cover" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="0">
-                        </section>
-                        <section class="music-player">
-                            <h4 class="music-player__title" data-amplitude-song-info="name" data-amplitude-song-index="0"></h4>
-                            <h5 class="music-player__author" data-amplitude-song-info="author" data-amplitude-song-index="0"></h5>
-                            <div class="music-time">
-                                <p class="music-time__current amplitude-current-minutes" data-amplitude-song-index="0"></p>
-                                :
-                                <p class="music-time__current amplitude-current-seconds" data-amplitude-song-index="0"></p>
-                                <p class="music-time__last amplitude-duration-minutes" data-amplitude-song-index="0"></p>
-                                :
-                                <p class="amplitude-duration-seconds" data-amplitude-song-index="0"></p>
-                            </div> 
-                            <!-- <div class="music-bar" id="progress">
-                                <div id="length" class="amplitude-song-played-progress" data-amplitude-song-index="0"></div>
-                            </div> -->
-                            <progress id="song-played-progress" class="music-bar amplitude-song-played-progress"
-                                    data-amplitude-song-index="0"></progress>
-                            <div class="music-control">
-                                <div class="music-control__backward" id="backward">
-                                    <img src="images/Backward.svg" alt="Backward">
-                                </div>
-                                <div class="music-control__play amplitude-play-pause" data-amplitude-song-index="0" id="play-pause">
-                                    <img src="images/Play.svg" alt="Play" class="play">
-                                </div>
-                                <div class="music-control__forward" id="forward">
-                                    <img src="images/Forward.svg" alt="Forward">
-                                </div>
-                            </div>
-                        </section>
-                      </div>
-
-                    </div>
-                  </div>
-                  <!-- /Song Structure -->
-
-                  <!-- Song Structure -->
-                  <div class="row mt-4">
-                    <div class="col-sm-12">
-
-                      <div class="music-container">
-                        <section class="album-cover">
-                            <img class="cover" data-amplitude-song-info="cover_art_url" data-amplitude-song-index="1">
-                        </section>
-                        <section class="music-player">
-                            <h4 class="music-player__title" data-amplitude-song-info="name" data-amplitude-song-index="1"></h4>
-                            <h5 class="music-player__author" data-amplitude-song-info="author" data-amplitude-song-index="1"></h5>
-                            <div class="music-time">
-                                <p class="music-time__current amplitude-current-minutes" data-amplitude-song-index="1"></p>
-                                :
-                                <p class="music-time__current amplitude-current-seconds" data-amplitude-song-index="1"></p>
-                                <p class="music-time__last amplitude-duration-minutes" data-amplitude-song-index="1"></p>
-                                :
-                                <p class="amplitude-duration-seconds" data-amplitude-song-index="1"></p>
-                            </div> 
-                            <!-- <div class="music-bar" id="progress">
-                                <div id="length" class="amplitude-song-played-progress" data-amplitude-song-index="0"></div>
-                            </div> -->
-                            <progress id="song-played-progress" class="music-bar amplitude-song-played-progress"
-                                    data-amplitude-song-index="1"></progress>
-                            <div class="music-control">
-                                <div class="music-control__backward" id="backward">
-                                    <img src="images/Backward.svg" alt="Backward">
-                                </div>
-                                <div class="music-control__play amplitude-play-pause" data-amplitude-song-index="1" id="play-pause">
-                                    <img src="images/Play.svg" alt="Play" class="play">
-                                </div>
-                                <div class="music-control__forward" id="forward">
-                                    <img src="images/Forward.svg" alt="Forward">
-                                </div>
-                            </div>
-                        </section>
-                      </div>
-
-                    </div>
-                  </div>
-                  <!-- /Song Structure -->
+                  <!-- Players -->
                 </div>
               </div>
             </div>
           </div>
           <!-- /Content -->
-          <!-- Scroll -->
+          <!-- Scroll to Bio -->
           <div class="row height-10-vh">
-            <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+            <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
               <div class="scroll-down">
                 <a href="#Bio"><span></span></a>
               </div>
             </div>
           </div>
-          <!-- /Scroll -->
+          <!-- /Scroll to Bio -->
         </div>
       </div>
-      <div id="Bio" class="row height-min-70-vh d-none d-sm-block"> <!-- Remove d-none and d-sm-block -->
-        <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 align-self-center">
-          <div class="card">
-            <div class="card-body">
-              <div class="row justify-content-sm-center">
-                <div class="col-sm-12">
-                  <h4 class="text-center">Bio</h4>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <img src="images/Bio.jpg" style="width: inherit;" />
-                </div>
-                <div class="col-sm-6">
-                  <p>
-                    Classe 99, nato a Como.<br>
-                    Inizia ad avvicinarsi al mondo della musica verso i 12-13 anni quando viene scelto come cantante una
-                    recita scolastica. Per questo, insieme ad un amico, visita per la prima volta uno studio musicale.<br>
-                    Qui canta per la prima volta e dentro di lui scatta qualcosa. Accantona questo sentimento per poi
-                    riprenderlo a 18 anni quando capisce cosa vuole veramente dalla vita. Inizia a sperimentare con i
-                    diversi stili per poi focalizzarsi sul genere Rap/Trap.
-                  </p>
+      <div id="Bio" class="row height-min-85-vh-xs height-min-70-vh-sm">
+        <div class="col-12">
+          <div class="row height-min-70-vh">
+            <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 align-self-center">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-sm-12">
+                      <h4 class="text-center">Bio</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 d-none d-sm-block">
+                      <img src="images/Bio.jpg" style="width: inherit;" />
+                    </div>
+                    <div class="col-sm-6">
+                      <p>
+                        Classe 99, nato a Como.<br>
+                        Inizia ad avvicinarsi al mondo della musica verso i 12-13 anni quando viene scelto come cantante una
+                        recita scolastica. Per questo, insieme ad un amico, visita per la prima volta uno studio musicale.<br>
+                        Qui canta per la prima volta e dentro di lui scatta qualcosa. Accantona questo sentimento per poi
+                        riprenderlo a 18 anni quando capisce cosa vuole veramente dalla vita. Inizia a sperimentare con i
+                        diversi stili per poi focalizzarsi sul genere Rap/Trap.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Scroll to Contacts -->
+          <div class="row height-10-vh d-block d-sm-none">
+            <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+              <div class="scroll-down">
+                <a href="#Contacts"><span></span></a>
+              </div>
+            </div>
+          </div>
+          <!-- Scroll to Contacts -->
         </div>
       </div>
-      <div id="Contacts" class="row height-15-vh d-none d-sm-block"> <!-- Remove d-none and d-sm-block -->
-        <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 align-self-center">
+      <div id="Contacts" class="row height-min-85-vh-xs height-15-vh-sm">
+        <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 align-self-center">
           <div class="card">
             <div class="card-body">
               <div class="row justify-content-sm-center">
@@ -299,14 +264,18 @@
               <div class="row justify-content-sm-center">
                 <div class="col-auto">
                   <label>
-                    Riccardo Prisco aka Rici -<a href="mailto:mille8OO@gmail.com"> mille8OO@gmail.com</a>
+                    Riccardo Prisco aka Rici -
+                    <a href="mailto:mille8OO@gmail.com" class="d-none d-sm-inline"> mille8OO@gmail.com</a>
+                    <a href="mailto:mille8OO@gmail.com" class="d-inline d-sm-none"> E-Mail</a>
                   </label>
                 </div>
               </div>
               <div class="row justify-content-sm-center">
                 <div class="col-auto">
                   <label>
-                    Copyright © 2020 Federico Nembrini - <a href="mailto:federico.nembrini@protonmail.com"> federico.nembrini@protonmail.com</a>
+                    Copyright © 2020 Federico Nembrini -
+                    <a href="mailto:federico.nembrini@protonmail.com" class="d-none d-sm-inline"> federico.nembrini@protonmail.com</a>
+                    <a href="mailto:federico.nembrini@protonmail.com" class="d-inline d-sm-none"> E-Mail</a>
                   </label>
                 </div>
               </div>
