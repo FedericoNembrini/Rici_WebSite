@@ -12,7 +12,7 @@ var Songs =
         "artist": "Rici",
         "album": "",
         "url": "songs/Buio.mp3",
-        "cover_art_url": "covers/No_Album.png"
+        "cover_art_url": "covers/NotteGiorno.jpg"
     }
 ];
 
